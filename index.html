@@ -1,114 +1,195 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de proyectos realizados durante el ciclo de SMR">
+    <meta name="description" content="Portfolio personal de Martín">
     <title>Portfolio | Martín</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- PORTADA -->
     <header class="hero">
+
         <nav>
-            <h2>Martín Tapia López<span>.</span></h2>
-            <a href="#proyectos">Proyectos</a>
+            <h2>Martín<span>.</span></h2>
+
+            <div class="nav-links">
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#proyectos">Proyectos</a>
+            </div>
         </nav>
 
         <div class="hero-contenido">
-            <p class="etiqueta">PORTFOLIO · SMR</p>
 
-            <h1>Proyectos de<br>
-                <span>Sistemas Microinformáticos</span>
+            <p class="etiqueta">PORTFOLIO PERSONAL</p>
+
+            <h1>
+                Hola, soy <span>Martín.</span>
             </h1>
 
             <p class="descripcion">
-                Recopilación de algunos de los proyectos y prácticas
-                realizados a lo largo del ciclo de SMR.
+                Este es mi espacio personal para recopilar proyectos,
+                trabajos y conocimientos que voy adquiriendo durante
+                mi formación y aprendizaje.
             </p>
 
-            <a class="boton" href="#proyectos">Ver mis proyectos ↓</a>
+            <a class="boton" href="#proyectos">
+                Ver mis proyectos ↓
+            </a>
+
         </div>
+
     </header>
 
 
-    <main id="proyectos">
+    <main>
 
-        <section class="proyectos">
-            <p class="etiqueta">TRABAJOS</p>
-            <h2>Mis proyectos</h2>
+        <!-- SOBRE MÍ -->
+        <section class="sobre-mi" id="sobre-mi">
 
-            <div class="grid">
+            <p class="etiqueta">SOBRE MÍ</p>
+            <h2>Aprendiendo y creando.</h2>
 
-                <article class="tarjeta">
-                    <div class="icono">🌐</div>
-                    <p class="categoria">DESARROLLO WEB</p>
-                    <h3>Página web de empresa</h3>
+            <p>
+                Actualmente estoy ampliando mis conocimientos en el mundo
+                de la informática. En este portfolio iré recopilando algunos
+                de mis proyectos, prácticas y trabajos a medida que continúe
+                aprendiendo y desarrollando nuevas habilidades.
+            </p>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section class="proyectos" id="proyectos">
+
+            <p class="etiqueta">PROYECTOS</p>
+            <h2>Lo que he hecho hasta ahora</h2>
+
+
+            <!-- APARTADO SMR -->
+            <div class="seccion-proyecto">
+
+                <div class="titulo-seccion">
+                    <div>
+                        <p class="numero">01</p>
+                        <h3>Sistemas Microinformáticos y Redes</h3>
+                    </div>
+
                     <p>
-                        Página web creada durante el curso,
-                        aplicando conocimientos de desarrollo web.
+                        Trabajos y prácticas realizados durante mi formación
+                        en Sistemas Microinformáticos y Redes.
                     </p>
-
-                    <a href="https://github.com/user-attachments/files/18408026/PwebEmpresa.zip">
-                        Descargar proyecto →
-                    </a>
-                </article>
+                </div>
 
 
-                <article class="tarjeta">
-                    <div class="icono">🔎</div>
-                    <p class="categoria">REDES</p>
-                    <h3>Práctica DNS</h3>
-                    <p>
-                        Examen práctico realizado aplicando
-                        conocimientos básicos de configuración DNS.
-                    </p>
+                <div class="grid">
 
-                    <a href="https://github.com/user-attachments/files/18408050/EXAMEN.MARTIN.PRACTICO.DNS.pdf">
-                        Ver examen →
-                    </a>
-                </article>
+                    <article class="tarjeta">
+                        <div class="icono">🌐</div>
 
+                        <p class="categoria">DESARROLLO WEB</p>
 
-                <article class="tarjeta">
-                    <div class="icono">🖥️</div>
-                    <p class="categoria">REDES</p>
-                    <h3>Práctica DHCP</h3>
-                    <p>
-                        Examen práctico sobre configuración y
-                        conocimientos básicos del servicio DHCP.
-                    </p>
+                        <h3>Página web de empresa</h3>
 
-                    <a href="https://github.com/user-attachments/files/18408090/DHCP.examen.Martin.docx">
-                        Ver examen →
-                    </a>
-                </article>
+                        <p>
+                            Página web creada durante el curso aplicando
+                            conocimientos básicos de desarrollo web.
+                        </p>
+
+                        <a href="https://github.com/user-attachments/files/18408026/PwebEmpresa.zip">
+                            Descargar proyecto →
+                        </a>
+                    </article>
 
 
-                <article class="tarjeta">
-                    <div class="icono">👥</div>
-                    <p class="categoria">SISTEMAS OPERATIVOS</p>
-                    <h3>Windows y Active Directory</h3>
-                    <p>
-                        Examen práctico sobre gestión de usuarios
-                        en Windows y Active Directory.
-                    </p>
+                    <article class="tarjeta">
+                        <div class="icono">🔎</div>
 
-                    <a href="https://github.com/user-attachments/files/18408104/Examen.SOR.practico.unidades.3.y.unidad.5.MARTIN.PDF.pdf">
-                        Ver examen →
-                    </a>
-                </article>
+                        <p class="categoria">REDES</p>
+
+                        <h3>Práctica DNS</h3>
+
+                        <p>
+                            Examen práctico realizado aplicando conocimientos
+                            básicos sobre configuración y funcionamiento de DNS.
+                        </p>
+
+                        <a href="https://github.com/user-attachments/files/18408050/EXAMEN.MARTIN.PRACTICO.DNS.pdf">
+                            Ver examen →
+                        </a>
+                    </article>
+
+
+                    <article class="tarjeta">
+                        <div class="icono">🖥️</div>
+
+                        <p class="categoria">REDES</p>
+
+                        <h3>Práctica DHCP</h3>
+
+                        <p>
+                            Examen práctico sobre configuración y conocimientos
+                            básicos del servicio DHCP.
+                        </p>
+
+                        <a href="https://github.com/user-attachments/files/18408090/DHCP.examen.Martin.docx">
+                            Ver examen →
+                        </a>
+                    </article>
+
+
+                    <article class="tarjeta">
+                        <div class="icono">👥</div>
+
+                        <p class="categoria">SISTEMAS OPERATIVOS</p>
+
+                        <h3>Windows y Active Directory</h3>
+
+                        <p>
+                            Examen práctico sobre gestión de usuarios
+                            en Windows y Active Directory.
+                        </p>
+
+                        <a href="https://github.com/user-attachments/files/18408104/Examen.SOR.practico.unidades.3.y.unidad.5.MARTIN.PDF.pdf">
+                            Ver examen →
+                        </a>
+                    </article>
+
+                </div>
 
             </div>
+
+
+            <!-- ESPACIO PARA FUTUROS PROYECTOS -->
+            <div class="proximamente">
+
+                <p class="numero">02</p>
+                <h3>Más proyectos próximamente.</h3>
+
+                <p>
+                    Este portfolio irá creciendo junto conmigo.
+                </p>
+
+            </div>
+
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
-        <p>Portfolio de Martín Tapia López actualizado a 23/09/2026</p>
+
+        <p>Portfolio de Martín</p>
+        <p>Creado con HTML y CSS · 2026</p>
+
     </footer>
 
 </body>
 </html>
+```
