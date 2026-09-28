@@ -851,4 +851,133 @@ footer a:hover {
         flex-direction: column;
     }
 
+   /* ========================================
+   COLOR DE SUBAPARTADOS
+   Rojo para diferenciar el contenido
+   interno de las categorías principales
+======================================== */
+
+
+/* ========================================
+   SMR / DAW
+======================================== */
+
+.boton-subcategoria {
+    border-color: #5f2630;
+}
+
+.boton-subcategoria:hover {
+    border-color: #ef4444;
+    background: #171421;
+}
+
+.subcategoria[open] > .boton-subcategoria {
+    border-color: #ef4444;
+}
+
+
+/* Icono de los subapartados */
+
+.boton-subcategoria .categoria-icono {
+    background: #28151b;
+    border-color: #5f2630;
+}
+
+
+/* Texto pequeño "FORMACIÓN" */
+
+.boton-subcategoria .numero {
+    color: #f87171;
+}
+
+
+/* Botón "Ver proyectos" */
+
+.boton-subcategoria .abrir-categoria {
+    color: #f87171;
+}
+
+
+/* Círculo de la flecha */
+
+.boton-subcategoria .flecha {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.35);
+}
+
+
+/* ========================================
+   FUTUROS ESTUDIOS
+======================================== */
+
+.futuro-estudio {
+    border-color: #5f2630;
+    background: #11121d;
+}
+
+.futuro-estudio .categoria-icono {
+    background: #28151b;
+    border-color: #5f2630;
+}
+
+.futuro-estudio .numero {
+    color: #f87171;
+}
+
+
+/* ========================================
+   CONTENIDO VACÍO
+   Proyectos personales / trabajo
+======================================== */
+
+.estado-vacio {
+    border-color: #5f2630;
+    background: #11121d;
+}
+
+.estado-vacio .estado-icono {
+    background: #28151b;
+    border: 1px solid #5f2630;
+}
+
+.estado-vacio .numero {
+    color: #f87171;
+}
+
+
+/* ========================================
+   TARJETAS DE PROYECTOS
+   Dentro de cualquier desplegable
+======================================== */
+
+.contenido-principal .tarjeta {
+    border-color: #47232c;
+}
+
+.contenido-principal .tarjeta:hover {
+    border-color: #ef4444;
+
+    box-shadow:
+        0 12px 30px
+        rgba(239, 68, 68, 0.07);
+}
+
+
+/* Categoría pequeña dentro de las tarjetas */
+
+.contenido-principal .tarjeta .categoria {
+    color: #f87171;
+}
+
+
+/* Enlaces de los proyectos */
+
+.contenido-principal .tarjeta a {
+    color: #f87171;
+}
+
+.contenido-principal .tarjeta a:hover {
+    color: #fca5a5;
+}
+
 }
