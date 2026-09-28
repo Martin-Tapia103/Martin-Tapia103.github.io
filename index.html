@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio personal de Martín">
+    <meta name="description" content="Portfolio personal de Martín Tapia López">
+
     <title>Portfolio | Martín Tapia López</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- PORTADA -->
+    <!-- ========================================
+         PORTADA
+    ========================================= -->
+
     <header class="hero">
 
         <nav>
-            <h2>Bienvenido :)<span></span></h2>
+
+            <h2>Bienvenido :)</h2>
 
             <div class="nav-links">
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
+
+                <a href="#sobre-mi">
+                    Sobre mí
+                </a>
+
+                <a href="#proyectos">
+                    Proyectos
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/mart%C3%ADn-tapia-l%C3%B3pez-49843443b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
             </div>
+
         </nav>
+
 
         <div class="hero-contenido">
 
-            <p class="etiqueta">PORTFOLIO PERSONAL</p>
+            <p class="etiqueta">
+                PORTFOLIO PERSONAL
+            </p>
 
             <h1>
                 Hola, soy <span>Martín.</span>
@@ -36,9 +63,22 @@
                 mi formación, aprendizaje y trabajo.
             </p>
 
-            <a class="boton" href="#proyectos">
-                Ver mis proyectos ↓
-            </a>
+            <div class="botones-hero">
+
+                <a class="boton" href="#proyectos">
+                    Ver mis proyectos ↓
+                </a>
+
+                <a
+                    class="boton-secundario"
+                    href="https://www.linkedin.com/in/mart%C3%ADn-tapia-l%C3%B3pez-49843443b/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
+            </div>
 
         </div>
 
@@ -47,11 +87,19 @@
 
     <main>
 
-        <!-- SOBRE MÍ -->
+        <!-- ========================================
+             SOBRE MÍ
+        ========================================= -->
+
         <section class="sobre-mi" id="sobre-mi">
 
-            <p class="etiqueta">SOBRE MÍ</p>
-            <h2>Actualmente aprendiendo.</h2>
+            <p class="etiqueta">
+                SOBRE MÍ
+            </p>
+
+            <h2>
+                Actualmente aprendiendo.
+            </h2>
 
             <p>
                 Constantemente estoy ampliando mis conocimientos en el mundo
@@ -63,112 +111,231 @@
         </section>
 
 
-        <!-- PROYECTOS -->
+        <!-- ========================================
+             PROYECTOS
+        ========================================= -->
+
         <section class="proyectos" id="proyectos">
 
-            <p class="etiqueta">PROYECTOS</p>
-            <h2>Mis logros hasta la fecha</h2>
+            <p class="etiqueta">
+                PROYECTOS
+            </p>
+
+            <h2>
+                Mis logros hasta la fecha
+            </h2>
 
 
-            <!-- APARTADO SMR -->
-            <div class="seccion-proyecto">
+            <!-- ========================================
+                 CATEGORÍA SMR
+            ========================================= -->
 
-                <div class="titulo-seccion">
-                    <div>
-                        <p class="numero">01</p>
-                        <h3>Sistemas Microinformáticos y Redes</h3>
+            <div class="categoria-proyecto">
+
+                <!-- BOTÓN SMR -->
+
+                <button
+                    class="boton-categoria"
+                    id="boton-smr"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="proyectos-smr"
+                >
+
+                    <div class="categoria-info">
+
+                        <div class="categoria-icono">
+                            🖥️
+                        </div>
+
+                        <div>
+
+                            <p class="numero">
+                                01 · FORMACIÓN
+                            </p>
+
+                            <h3>
+                                Sistemas Microinformáticos y Redes
+                            </h3>
+
+                            <p class="categoria-descripcion">
+                                Trabajos y prácticas realizados durante
+                                mi formación en SMR.
+                            </p>
+
+                        </div>
+
                     </div>
 
-                    <p>
-                        Trabajos y prácticas realizados durante mi formación
-                        en Sistemas Microinformáticos y Redes.
-                    </p>
-                </div>
+
+                    <div class="abrir-categoria">
+
+                        <span class="texto-abrir">
+                            Ver proyectos
+                        </span>
+
+                        <span class="flecha">
+                            ↓
+                        </span>
+
+                    </div>
+
+                </button>
 
 
-                <div class="grid">
+                <!-- ========================================
+                     PROYECTOS DE SMR
+                ========================================= -->
 
-                    <article class="tarjeta">
-                        <div class="icono">🌐</div>
+                <div
+                    class="contenido-categoria"
+                    id="proyectos-smr"
+                >
 
-                        <p class="categoria">DESARROLLO WEB</p>
-
-                        <h3>Página web de empresa</h3>
-
-                        <p>
-                            Página web creada durante el curso aplicando
-                            conocimientos básicos de desarrollo web.
-                        </p>
-
-                        <a href="https://github.com/user-attachments/files/18408026/PwebEmpresa.zip">
-                            Descargar proyecto →
-                        </a>
-                    </article>
+                    <div class="grid">
 
 
-                    <article class="tarjeta">
-                        <div class="icono">🔎</div>
+                        <!-- PÁGINA WEB -->
 
-                        <p class="categoria">REDES</p>
+                        <article class="tarjeta">
 
-                        <h3>Práctica DNS</h3>
+                            <div class="icono">
+                                🌐
+                            </div>
 
-                        <p>
-                            Examen práctico realizado aplicando conocimientos
-                            básicos sobre configuración y funcionamiento de DNS.
-                        </p>
+                            <p class="categoria">
+                                DESARROLLO WEB
+                            </p>
 
-                        <a href="https://github.com/user-attachments/files/18408050/EXAMEN.MARTIN.PRACTICO.DNS.pdf">
-                            Ver examen →
-                        </a>
-                    </article>
+                            <h3>
+                                Página web de empresa
+                            </h3>
 
+                            <p>
+                                Página web creada durante el curso
+                                aplicando conocimientos básicos
+                                de desarrollo web.
+                            </p>
 
-                    <article class="tarjeta">
-                        <div class="icono">🖥️</div>
+                            <a
+                                href="https://github.com/user-attachments/files/18408026/PwebEmpresa.zip"
+                            >
+                                Descargar proyecto →
+                            </a>
 
-                        <p class="categoria">REDES</p>
-
-                        <h3>Práctica DHCP</h3>
-
-                        <p>
-                            Examen práctico sobre configuración y conocimientos
-                            básicos del servicio DHCP.
-                        </p>
-
-                        <a href="https://github.com/user-attachments/files/18408090/DHCP.examen.Martin.docx">
-                            Ver examen →
-                        </a>
-                    </article>
+                        </article>
 
 
-                    <article class="tarjeta">
-                        <div class="icono">👥</div>
+                        <!-- DNS -->
 
-                        <p class="categoria">SISTEMAS OPERATIVOS</p>
+                        <article class="tarjeta">
 
-                        <h3>Windows y Active Directory</h3>
+                            <div class="icono">
+                                🔎
+                            </div>
 
-                        <p>
-                            Examen práctico sobre gestión de usuarios
-                            en Windows y Active Directory.
-                        </p>
+                            <p class="categoria">
+                                REDES
+                            </p>
 
-                        <a href="https://github.com/user-attachments/files/18408104/Examen.SOR.practico.unidades.3.y.unidad.5.MARTIN.PDF.pdf">
-                            Ver examen →
-                        </a>
-                    </article>
+                            <h3>
+                                Práctica DNS
+                            </h3>
+
+                            <p>
+                                Examen práctico realizado aplicando
+                                conocimientos básicos sobre configuración
+                                y funcionamiento de DNS.
+                            </p>
+
+                            <a
+                                href="https://github.com/user-attachments/files/18408050/EXAMEN.MARTIN.PRACTICO.DNS.pdf"
+                            >
+                                Ver examen →
+                            </a>
+
+                        </article>
+
+
+                        <!-- DHCP -->
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                🖥️
+                            </div>
+
+                            <p class="categoria">
+                                REDES
+                            </p>
+
+                            <h3>
+                                Práctica DHCP
+                            </h3>
+
+                            <p>
+                                Examen práctico sobre configuración
+                                y conocimientos básicos del servicio DHCP.
+                            </p>
+
+                            <a
+                                href="https://github.com/user-attachments/files/18408090/DHCP.examen.Martin.docx"
+                            >
+                                Ver examen →
+                            </a>
+
+                        </article>
+
+
+                        <!-- WINDOWS / ACTIVE DIRECTORY -->
+
+                        <article class="tarjeta">
+
+                            <div class="icono">
+                                👥
+                            </div>
+
+                            <p class="categoria">
+                                SISTEMAS OPERATIVOS
+                            </p>
+
+                            <h3>
+                                Windows y Active Directory
+                            </h3>
+
+                            <p>
+                                Examen práctico sobre gestión de usuarios
+                                en Windows y Active Directory.
+                            </p>
+
+                            <a
+                                href="https://github.com/user-attachments/files/18408104/Examen.SOR.practico.unidades.3.y.unidad.5.MARTIN.PDF.pdf"
+                            >
+                                Ver examen →
+                            </a>
+
+                        </article>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- ESPACIO PARA FUTUROS PROYECTOS -->
+            <!-- ========================================
+                 FUTUROS PROYECTOS
+            ========================================= -->
+
             <div class="proximamente">
 
-                <p class="numero">02</p>
-                <h3>Más proyectos próximamente.</h3>
+                <p class="numero">
+                    02
+                </p>
+
+                <h3>
+                    Más proyectos próximamente.
+                </h3>
 
                 <p>
                     Este portfolio irá creciendo junto conmigo.
@@ -181,12 +348,67 @@
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
     <footer>
 
-        <p>Actualizado a 23/09/2026</p>
-        
+        <p>
+            Actualizado a 28/09/2026
+        </p>
+
+        <a
+            href="https://www.linkedin.com/in/mart%C3%ADn-tapia-l%C3%B3pez-49843443b/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            LinkedIn ↗
+        </a>
+
     </footer>
 
+
+    <!-- ========================================
+         ABRIR / CERRAR PROYECTOS SMR
+    ========================================= -->
+
+    <script>
+
+        const botonSMR = document.getElementById("boton-smr");
+        const proyectosSMR = document.getElementById("proyectos-smr");
+
+        const textoAbrir = botonSMR.querySelector(".texto-abrir");
+
+        botonSMR.addEventListener("click", function () {
+
+            proyectosSMR.classList.toggle("activo");
+            botonSMR.classList.toggle("activo");
+
+            const estaAbierto =
+                proyectosSMR.classList.contains("activo");
+
+            botonSMR.setAttribute(
+                "aria-expanded",
+                estaAbierto
+            );
+
+            if (estaAbierto) {
+
+                textoAbrir.textContent =
+                    "Ocultar proyectos";
+
+            } else {
+
+                textoAbrir.textContent =
+                    "Ver proyectos";
+
+            }
+
+        });
+
+    </script>
+
 </body>
+
 </html>
