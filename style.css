@@ -62,7 +62,7 @@ body {
         ),
         #0b1120;
 
-    padding: 0 8% 65px;
+    padding: 0 8% 60px;
 }
 
 
@@ -72,6 +72,7 @@ body {
 
 nav {
     max-width: 1200px;
+
     height: 70px;
 
     margin: auto;
@@ -107,7 +108,7 @@ nav a:hover {
 
 
 /* ========================================
-   CONTENIDO DE PORTADA
+   CONTENIDO PORTADA
 ======================================== */
 
 .hero-contenido {
@@ -115,7 +116,7 @@ nav a:hover {
 
     margin: auto;
 
-    padding-top: 70px;
+    padding-top: 65px;
 }
 
 .hero h1 {
@@ -144,7 +145,7 @@ nav a:hover {
 
 
 /* ========================================
-   BOTONES DE PORTADA
+   BOTONES PORTADA
 ======================================== */
 
 .botones-hero {
@@ -211,7 +212,7 @@ nav a:hover {
 
     margin: auto;
 
-    padding: 55px 30px;
+    padding: 50px 30px;
 
     border-bottom: 1px solid #1e293b;
 }
@@ -242,7 +243,7 @@ nav a:hover {
 
     margin: auto;
 
-    padding: 55px 30px;
+    padding: 50px 30px;
 }
 
 .proyectos > h2 {
@@ -250,22 +251,35 @@ nav a:hover {
 
     font-size: clamp(2rem, 5vw, 3.2rem);
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 
 /* ========================================
-   BOTÓN / CATEGORÍA SMR
+   QUITAR MARCADOR DE DETAILS
 ======================================== */
 
-.categoria-proyecto {
-    margin-bottom: 45px;
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+/* ========================================
+   GRANDES CATEGORÍAS
+======================================== */
+
+.grupo-principal {
+    margin-bottom: 16px;
 }
 
 .boton-categoria {
     width: 100%;
 
-    padding: 25px;
+    padding: 24px;
 
     background:
         linear-gradient(
@@ -278,8 +292,6 @@ nav a:hover {
 
     border-radius: 14px;
 
-    color: inherit;
-
     cursor: pointer;
 
     display: flex;
@@ -288,41 +300,29 @@ nav a:hover {
 
     gap: 25px;
 
-    text-align: left;
-
-    font: inherit;
-
     transition:
         transform 0.25s,
         border-color 0.25s,
-        box-shadow 0.25s,
-        background 0.25s;
+        box-shadow 0.25s;
 }
 
 .boton-categoria:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 
     border-color: #38bdf8;
 
     box-shadow:
         0 12px 30px
-        rgba(0, 0, 0, 0.25);
+        rgba(0, 0, 0, 0.22);
 }
 
-.boton-categoria.activo {
+.grupo-principal[open] > .boton-categoria {
     border-color: #38bdf8;
-
-    background:
-        linear-gradient(
-            135deg,
-            #111827,
-            #12213d
-        );
 }
 
 
 /* ========================================
-   INFORMACIÓN DEL BOTÓN SMR
+   INFORMACIÓN DE LAS CATEGORÍAS
 ======================================== */
 
 .categoria-info {
@@ -330,7 +330,7 @@ nav a:hover {
 
     align-items: center;
 
-    gap: 20px;
+    gap: 18px;
 }
 
 .categoria-icono {
@@ -352,12 +352,19 @@ nav a:hover {
     font-size: 1.7rem;
 }
 
+.categoria-icono.pequeno {
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.4rem;
+}
+
 .categoria-info h3 {
     color: white;
 
-    font-size: 1.55rem;
+    font-size: 1.5rem;
 
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .categoria-descripcion {
@@ -368,7 +375,7 @@ nav a:hover {
 
 
 /* ========================================
-   "VER PROYECTOS →"
+   FLECHAS
 ======================================== */
 
 .abrir-categoria {
@@ -403,44 +410,85 @@ nav a:hover {
         background 0.3s;
 }
 
-.boton-categoria:hover .flecha {
-    background: rgba(56, 189, 248, 0.18);
+.grupo-principal[open]
+> .boton-categoria
+.flecha {
+    transform: rotate(180deg);
 }
 
-.boton-categoria.activo .flecha {
+.subcategoria[open]
+> .boton-subcategoria
+.flecha {
     transform: rotate(180deg);
 }
 
 
 /* ========================================
-   CONTENIDO DESPLEGABLE
+   CONTENIDO DE ESTUDIOS / CATEGORÍAS
 ======================================== */
 
-.contenido-categoria {
-    display: grid;
+.contenido-principal {
+    padding-top: 16px;
+}
 
-    grid-template-rows: 0fr;
 
-    opacity: 0;
+/* ========================================
+   SUBCATEGORÍAS:
+   SMR / DAW / FUTUROS ESTUDIOS
+======================================== */
+
+.subcategoria {
+    margin-bottom: 12px;
+}
+
+.boton-subcategoria {
+    width: 100%;
+
+    padding: 20px;
+
+    background: #0f172a;
+
+    border: 1px solid #1e293b;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
 
     transition:
-        grid-template-rows 0.4s ease,
-        opacity 0.3s ease,
-        margin-top 0.4s ease;
-
-    margin-top: 0;
+        border-color 0.25s,
+        background 0.25s;
 }
 
-.contenido-categoria > .grid {
-    overflow: hidden;
+.boton-subcategoria:hover {
+    border-color: #38bdf8;
+
+    background: #111c31;
 }
 
-.contenido-categoria.activo {
-    grid-template-rows: 1fr;
+.subcategoria[open]
+> .boton-subcategoria {
+    border-color: #38bdf8;
+}
 
-    opacity: 1;
+.boton-subcategoria
+.categoria-info h3 {
+    font-size: 1.3rem;
+}
 
-    margin-top: 20px;
+
+/* ========================================
+   CONTENIDO DE SMR / DAW
+======================================== */
+
+.contenido-subcategoria {
+    padding-top: 14px;
+    padding-bottom: 4px;
 }
 
 
@@ -453,7 +501,7 @@ nav a:hover {
 
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 18px;
+    gap: 16px;
 }
 
 .tarjeta {
@@ -461,7 +509,7 @@ nav a:hover {
 
     border: 1px solid #1e293b;
 
-    padding: 25px;
+    padding: 24px;
 
     border-radius: 14px;
 
@@ -529,26 +577,84 @@ nav a:hover {
 
 
 /* ========================================
-   PRÓXIMAMENTE
+   FUTUROS ESTUDIOS
 ======================================== */
 
-.proximamente {
-    border-top: 1px solid #1e293b;
+.futuro-estudio {
+    display: flex;
 
-    padding-top: 30px;
+    gap: 16px;
 
-    margin-top: 10px;
+    align-items: center;
+
+    padding: 20px;
+
+    background: #0f172a;
+
+    border: 1px dashed #334155;
+
+    border-radius: 12px;
 }
 
-.proximamente h3 {
+.futuro-estudio h3 {
     color: white;
 
-    font-size: 1.7rem;
+    font-size: 1.15rem;
 
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
-.proximamente > p:last-child {
+.futuro-estudio > div:last-child > p:last-child {
+    color: #64748b;
+}
+
+
+/* ========================================
+   APARTADOS VACÍOS
+======================================== */
+
+.estado-vacio {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 24px;
+
+    background: #0f172a;
+
+    border: 1px dashed #334155;
+
+    border-radius: 12px;
+}
+
+.estado-icono {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    font-size: 1.4rem;
+}
+
+.estado-vacio h3 {
+    color: white;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 2px;
+}
+
+.estado-vacio > div:last-child > p:last-child {
     color: #64748b;
 }
 
@@ -585,18 +691,16 @@ footer a:hover {
 
 
 /* ========================================
-   TABLETS Y MÓVILES
+   TABLETS / MÓVILES
 ======================================== */
 
 @media (max-width: 700px) {
-
-    /* ---------- PORTADA ---------- */
 
     .hero {
         padding:
             0
             6%
-            50px;
+            45px;
     }
 
     nav {
@@ -604,24 +708,19 @@ footer a:hover {
     }
 
     nav h2 {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .nav-links {
-        gap: 15px;
+        gap: 14px;
     }
-
-    /*
-       Ocultamos "Sobre mí" para evitar
-       saturar el menú en móvil.
-    */
 
     .nav-links a:first-child {
         display: none;
     }
 
     .hero-contenido {
-        padding-top: 50px;
+        padding-top: 45px;
     }
 
     .hero h1 {
@@ -636,59 +735,37 @@ footer a:hover {
     }
 
 
-    /* ---------- SOBRE MÍ ---------- */
+    /* SOBRE MÍ */
 
     .sobre-mi {
         padding:
-            45px
+            42px
             20px;
     }
 
 
-    /* ---------- PROYECTOS ---------- */
+    /* PROYECTOS */
 
     .proyectos {
         padding:
-            45px
+            42px
             20px;
     }
 
     .proyectos > h2 {
-        margin-bottom: 28px;
+        margin-bottom: 25px;
     }
 
 
-    /* ---------- BOTÓN SMR ---------- */
+    /* CATEGORÍAS */
 
-    .boton-categoria {
-        padding: 20px;
-
-        align-items: flex-start;
-
+    .boton-categoria,
+    .boton-subcategoria {
         flex-direction: column;
 
-        gap: 18px;
-    }
-
-    .categoria-info {
         align-items: flex-start;
 
-        gap: 15px;
-    }
-
-    .categoria-icono {
-        width: 48px;
-        height: 48px;
-
-        font-size: 1.4rem;
-    }
-
-    .categoria-info h3 {
-        font-size: 1.25rem;
-    }
-
-    .categoria-descripcion {
-        margin-top: 4px;
+        gap: 16px;
     }
 
     .abrir-categoria {
@@ -697,17 +774,21 @@ footer a:hover {
         justify-content: space-between;
     }
 
+    .categoria-info {
+        align-items: flex-start;
+    }
 
-    /* ---------- TARJETAS ---------- */
+
+    /* TARJETAS */
 
     .grid {
         grid-template-columns: 1fr;
 
-        gap: 14px;
+        gap: 12px;
     }
 
     .tarjeta {
-        padding: 22px;
+        padding: 21px;
     }
 
     .tarjeta > p:not(.categoria) {
@@ -715,18 +796,15 @@ footer a:hover {
     }
 
 
-    /* ---------- PRÓXIMAMENTE ---------- */
+    /* VACÍOS */
 
-    .categoria-proyecto {
-        margin-bottom: 35px;
-    }
-
-    .proximamente {
-        padding-top: 25px;
+    .estado-vacio,
+    .futuro-estudio {
+        align-items: flex-start;
     }
 
 
-    /* ---------- FOOTER ---------- */
+    /* FOOTER */
 
     footer {
         flex-direction: column;
@@ -744,7 +822,7 @@ footer a:hover {
 
 
 /* ========================================
-   MÓVILES MUY PEQUEÑOS
+   MÓVILES PEQUEÑOS
 ======================================== */
 
 @media (max-width: 480px) {
@@ -753,14 +831,10 @@ footer a:hover {
         font-size: 2.6rem;
     }
 
-    .nav-links a[href="#sobre-mi"] {
-        display: none;
-    }
-
     .botones-hero {
-        align-items: stretch;
-
         flex-direction: column;
+
+        align-items: stretch;
     }
 
     .boton,
@@ -769,6 +843,11 @@ footer a:hover {
     }
 
     .categoria-info {
+        flex-direction: column;
+    }
+
+    .estado-vacio,
+    .futuro-estudio {
         flex-direction: column;
     }
 
