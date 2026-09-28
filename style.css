@@ -833,7 +833,6 @@ footer a:hover {
 
     .botones-hero {
         flex-direction: column;
-
         align-items: stretch;
     }
 
@@ -851,7 +850,10 @@ footer a:hover {
         flex-direction: column;
     }
 
-   /* ========================================
+}
+
+
+/* ========================================
    COLOR DE SUBAPARTADOS
    Rojo para diferenciar el contenido
    interno de las categorías principales
@@ -947,7 +949,6 @@ footer a:hover {
 
 /* ========================================
    TARJETAS DE PROYECTOS
-   Dentro de cualquier desplegable
 ======================================== */
 
 .contenido-principal .tarjeta {
@@ -978,6 +979,4 @@ footer a:hover {
 
 .contenido-principal .tarjeta a:hover {
     color: #fca5a5;
-}
-
 }
