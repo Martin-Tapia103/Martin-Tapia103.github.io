@@ -14,17 +14,38 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background: #0b1120;
     color: #e5e7eb;
+
     line-height: 1.6;
 }
 
+
+/* ========================================
+   ELEMENTOS GENERALES
+======================================== */
+
 .etiqueta {
     color: #38bdf8;
+
     font-size: 0.8rem;
     font-weight: bold;
+
     letter-spacing: 3px;
-    margin-bottom: 12px;
+
+    margin-bottom: 10px;
+}
+
+.numero {
+    color: #38bdf8;
+
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
 }
 
 
@@ -33,8 +54,6 @@ body {
 ======================================== */
 
 .hero {
-    min-height: 620px;
-
     background:
         radial-gradient(
             circle at 80% 20%,
@@ -43,40 +62,43 @@ body {
         ),
         #0b1120;
 
-    padding: 0 8%;
+    padding: 0 8% 65px;
 }
 
 
-/* ---------- NAVEGACIÓN ---------- */
+/* ========================================
+   NAVEGACIÓN
+======================================== */
 
 nav {
-    height: 75px;
+    max-width: 1200px;
+    height: 70px;
+
+    margin: auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    max-width: 1200px;
-    margin: auto;
 }
 
 nav h2 {
-    font-size: 1.5rem;
     color: white;
-}
 
-nav h2 span {
-    color: #38bdf8;
+    font-size: 1.4rem;
 }
 
 .nav-links {
     display: flex;
+
     gap: 25px;
 }
 
 nav a {
     color: #94a3b8;
+
     text-decoration: none;
-    transition: 0.3s;
+
+    transition: color 0.25s;
 }
 
 nav a:hover {
@@ -84,21 +106,26 @@ nav a:hover {
 }
 
 
-/* ---------- CONTENIDO PORTADA ---------- */
+/* ========================================
+   CONTENIDO DE PORTADA
+======================================== */
 
 .hero-contenido {
     max-width: 1200px;
+
     margin: auto;
 
-    /* Antes había demasiado espacio aquí */
-    padding-top: 90px;
+    padding-top: 70px;
 }
 
 .hero h1 {
-    font-size: clamp(3.2rem, 7vw, 6rem);
-    line-height: 1.05;
-    color: white;
     max-width: 950px;
+
+    color: white;
+
+    font-size: clamp(3.2rem, 7vw, 6rem);
+
+    line-height: 1.05;
 }
 
 .hero h1 span {
@@ -107,31 +134,71 @@ nav a:hover {
 
 .descripcion {
     max-width: 620px;
+
     color: #94a3b8;
+
     font-size: 1.1rem;
 
-    margin: 25px 0 30px;
+    margin: 22px 0 28px;
 }
 
-.boton {
+
+/* ========================================
+   BOTONES DE PORTADA
+======================================== */
+
+.botones-hero {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.boton,
+.boton-secundario {
     display: inline-block;
 
-    background: #38bdf8;
-    color: #07111f;
-
-    padding: 12px 22px;
+    padding: 11px 20px;
 
     border-radius: 8px;
 
     text-decoration: none;
+
     font-weight: bold;
 
-    transition: 0.25s;
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        border-color 0.25s;
+}
+
+.boton {
+    background: #38bdf8;
+
+    color: #07111f;
 }
 
 .boton:hover {
-    transform: translateY(-3px);
     background: #7dd3fc;
+
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    color: #e5e7eb;
+
+    background: #111827;
+
+    border: 1px solid #334155;
+}
+
+.boton-secundario:hover {
+    border-color: #38bdf8;
+
+    transform: translateY(-2px);
 }
 
 
@@ -141,10 +208,10 @@ nav a:hover {
 
 .sobre-mi {
     max-width: 1200px;
+
     margin: auto;
 
-    /* Antes: 110px */
-    padding: 70px 30px;
+    padding: 55px 30px;
 
     border-bottom: 1px solid #1e293b;
 }
@@ -154,13 +221,14 @@ nav a:hover {
 
     font-size: clamp(2rem, 5vw, 3.2rem);
 
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 .sobre-mi > p:last-child {
     max-width: 750px;
 
     color: #94a3b8;
+
     font-size: 1.1rem;
 }
 
@@ -171,10 +239,10 @@ nav a:hover {
 
 .proyectos {
     max-width: 1200px;
+
     margin: auto;
 
-    /* Antes: 110px */
-    padding: 70px 30px;
+    padding: 55px 30px;
 }
 
 .proyectos > h2 {
@@ -182,53 +250,197 @@ nav a:hover {
 
     font-size: clamp(2rem, 5vw, 3.2rem);
 
-    /* Antes: 80px */
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 
 /* ========================================
-   TÍTULO DE CADA APARTADO
+   BOTÓN / CATEGORÍA SMR
 ======================================== */
 
-.seccion-proyecto {
-    /* Antes: 100px */
-    margin-bottom: 65px;
+.categoria-proyecto {
+    margin-bottom: 45px;
 }
 
-.titulo-seccion {
-    display: grid;
+.boton-categoria {
+    width: 100%;
 
-    grid-template-columns: 1fr 1fr;
+    padding: 25px;
 
-    gap: 40px;
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #101b31
+        );
 
-    align-items: end;
+    border: 1px solid #26364f;
 
-    /* Antes: 40px */
-    margin-bottom: 30px;
+    border-radius: 14px;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 25px;
+
+    text-align: left;
+
+    font: inherit;
+
+    transition:
+        transform 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s,
+        background 0.25s;
 }
 
-.numero {
+.boton-categoria:hover {
+    transform: translateY(-3px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.25);
+}
+
+.boton-categoria.activo {
+    border-color: #38bdf8;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #12213d
+        );
+}
+
+
+/* ========================================
+   INFORMACIÓN DEL BOTÓN SMR
+======================================== */
+
+.categoria-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.categoria-icono {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #172554;
+
+    border: 1px solid #1e3a5f;
+
+    border-radius: 12px;
+
+    font-size: 1.7rem;
+}
+
+.categoria-info h3 {
+    color: white;
+
+    font-size: 1.55rem;
+
+    margin-bottom: 3px;
+}
+
+.categoria-descripcion {
+    color: #94a3b8;
+
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   "VER PROYECTOS →"
+======================================== */
+
+.abrir-categoria {
     color: #38bdf8;
-
-    font-size: 0.75rem;
 
     font-weight: bold;
 
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
 
-    margin-bottom: 5px;
+    gap: 12px;
+
+    white-space: nowrap;
 }
 
-.titulo-seccion h3 {
-    color: white;
-    font-size: 1.8rem;
+.flecha {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(56, 189, 248, 0.1);
+
+    border: 1px solid rgba(56, 189, 248, 0.25);
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.3s,
+        background 0.3s;
 }
 
-.titulo-seccion > p {
-    color: #94a3b8;
-    max-width: 500px;
+.boton-categoria:hover .flecha {
+    background: rgba(56, 189, 248, 0.18);
+}
+
+.boton-categoria.activo .flecha {
+    transform: rotate(180deg);
+}
+
+
+/* ========================================
+   CONTENIDO DESPLEGABLE
+======================================== */
+
+.contenido-categoria {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    opacity: 0;
+
+    transition:
+        grid-template-rows 0.4s ease,
+        opacity 0.3s ease,
+        margin-top 0.4s ease;
+
+    margin-top: 0;
+}
+
+.contenido-categoria > .grid {
+    overflow: hidden;
+}
+
+.contenido-categoria.activo {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+
+    margin-top: 20px;
 }
 
 
@@ -241,8 +453,7 @@ nav a:hover {
 
     grid-template-columns: repeat(2, 1fr);
 
-    /* Separación entre tarjetas */
-    gap: 20px;
+    gap: 18px;
 }
 
 .tarjeta {
@@ -250,27 +461,30 @@ nav a:hover {
 
     border: 1px solid #1e293b;
 
-    /* Antes: 32px */
-    padding: 28px;
+    padding: 25px;
 
     border-radius: 14px;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
 }
 
 .tarjeta:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     border-color: #38bdf8;
 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.25);
 }
 
 .icono {
-    font-size: 2rem;
+    font-size: 1.8rem;
 
-    /* Antes: 25px */
-    margin-bottom: 18px;
+    margin-bottom: 14px;
 }
 
 .categoria {
@@ -286,26 +500,21 @@ nav a:hover {
 .tarjeta h3 {
     color: white;
 
-    font-size: 1.4rem;
+    font-size: 1.35rem;
 
-    margin: 6px 0 10px;
+    margin: 5px 0 8px;
 }
 
 .tarjeta > p:not(.categoria) {
     color: #94a3b8;
 
-    /*
-       Mantiene las tarjetas de una misma fila
-       visualmente equilibradas.
-    */
-    min-height: 65px;
+    min-height: 60px;
 }
 
 .tarjeta a {
     display: inline-block;
 
-    /* Antes: 25px */
-    margin-top: 18px;
+    margin-top: 15px;
 
     color: #38bdf8;
 
@@ -326,18 +535,17 @@ nav a:hover {
 .proximamente {
     border-top: 1px solid #1e293b;
 
-    /* Antes: 60px */
-    padding-top: 40px;
+    padding-top: 30px;
 
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .proximamente h3 {
     color: white;
 
-    font-size: 2rem;
+    font-size: 1.7rem;
 
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .proximamente > p:last-child {
@@ -352,43 +560,51 @@ nav a:hover {
 footer {
     border-top: 1px solid #1e293b;
 
-    padding: 25px 8%;
+    padding: 22px 8%;
 
     color: #64748b;
 
     display: flex;
-
     justify-content: space-between;
+    align-items: center;
 
     font-size: 0.85rem;
 }
 
+footer a {
+    color: #94a3b8;
+
+    text-decoration: none;
+
+    transition: color 0.25s;
+}
+
+footer a:hover {
+    color: #38bdf8;
+}
+
 
 /* ========================================
-   DISEÑO PARA MÓVILES
+   TABLETS Y MÓVILES
 ======================================== */
 
 @media (max-width: 700px) {
 
+    /* ---------- PORTADA ---------- */
+
     .hero {
-        min-height: 540px;
-        padding: 0 6%;
+        padding:
+            0
+            6%
+            50px;
     }
 
     nav {
         height: 65px;
     }
 
-    .hero-contenido {
-        padding-top: 65px;
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .descripcion {
-        margin: 20px 0 25px;
+    nav h2 {
+        font-size: 1.2rem;
     }
 
     .nav-links {
@@ -396,42 +612,89 @@ footer {
     }
 
     /*
-       En pantallas pequeñas ocultamos "Sobre mí"
-       del menú para evitar que quede demasiado
-       apretado.
+       Ocultamos "Sobre mí" para evitar
+       saturar el menú en móvil.
     */
+
     .nav-links a:first-child {
         display: none;
+    }
+
+    .hero-contenido {
+        padding-top: 50px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .descripcion {
+        margin:
+            18px
+            0
+            23px;
     }
 
 
     /* ---------- SOBRE MÍ ---------- */
 
     .sobre-mi {
-        padding: 55px 20px;
+        padding:
+            45px
+            20px;
     }
 
 
     /* ---------- PROYECTOS ---------- */
 
     .proyectos {
-        padding: 55px 20px;
+        padding:
+            45px
+            20px;
     }
 
     .proyectos > h2 {
-        margin-bottom: 40px;
+        margin-bottom: 28px;
     }
 
-    .seccion-proyecto {
-        margin-bottom: 50px;
+
+    /* ---------- BOTÓN SMR ---------- */
+
+    .boton-categoria {
+        padding: 20px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 18px;
     }
 
-    .titulo-seccion {
-        grid-template-columns: 1fr;
+    .categoria-info {
+        align-items: flex-start;
 
-        gap: 12px;
+        gap: 15px;
+    }
 
-        margin-bottom: 25px;
+    .categoria-icono {
+        width: 48px;
+        height: 48px;
+
+        font-size: 1.4rem;
+    }
+
+    .categoria-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .categoria-descripcion {
+        margin-top: 4px;
+    }
+
+    .abrir-categoria {
+        width: 100%;
+
+        justify-content: space-between;
     }
 
 
@@ -440,11 +703,11 @@ footer {
     .grid {
         grid-template-columns: 1fr;
 
-        gap: 15px;
+        gap: 14px;
     }
 
     .tarjeta {
-        padding: 24px;
+        padding: 22px;
     }
 
     .tarjeta > p:not(.categoria) {
@@ -454,8 +717,12 @@ footer {
 
     /* ---------- PRÓXIMAMENTE ---------- */
 
+    .categoria-proyecto {
+        margin-bottom: 35px;
+    }
+
     .proximamente {
-        padding-top: 35px;
+        padding-top: 25px;
     }
 
 
@@ -464,8 +731,45 @@ footer {
     footer {
         flex-direction: column;
 
+        align-items: flex-start;
+
         gap: 5px;
 
-        padding: 22px 6%;
+        padding:
+            20px
+            6%;
     }
+
+}
+
+
+/* ========================================
+   MÓVILES MUY PEQUEÑOS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .nav-links a[href="#sobre-mi"] {
+        display: none;
+    }
+
+    .botones-hero {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .boton,
+    .boton-secundario {
+        text-align: center;
+    }
+
+    .categoria-info {
+        flex-direction: column;
+    }
+
 }
